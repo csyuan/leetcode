@@ -3,9 +3,6 @@ import scala.collection.mutable
 /**
   * Created by Sl.Yuan on 2017/3/14.
   */
-class WeekOne {
-
-}
 
 object WeekOne {
 
@@ -39,7 +36,7 @@ object WeekOne {
       if (countMap.contains(word))  {
         countMap(word) = countMap(word) + 1
       } else {
-        countMap += (word ->1)
+        countMap += (word -> 1)
       }
     }
 
