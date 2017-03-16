@@ -1,3 +1,4 @@
+import java.awt.Point
 /**
   * Created by slyuan on 17-3-16.
   */
@@ -5,9 +6,7 @@ class WeekTwo {
 
 }
 
-
-
-//one
+//one--------------------------------------------------------
 class BankAccount {
 
 
@@ -27,7 +26,7 @@ class BankAccount {
   def balance = account
 }
 
-//two
+//two--------------------------------------------------------
 class Person4(info:String) {
   val _name = info.split("\\s+")
   val firstName = _name(0)
@@ -38,23 +37,23 @@ class Person4(info:String) {
 }
 
 
-////three
-//class Point(val x:Int, val y:Int) {
-//  override def toString = "Point x : " + x + ", y : " + y
-//}
-//
-//object Point{
-//  def apply(x: Int, y: Int): Point = new Point(x, y)
-//}
+//three--------------------------------------------------------
+class Point(val x:Int, val y:Int) {
+  override def toString = "Point x : " + x + ", y : " + y
+}
+
+object Point{
+  def apply(x: Int, y: Int): Point = new Point(x, y)
+}
 
 
 
+//four--------------------------------------------------------
 final class point(val x: Int, val y: Int) {
   override def toString: String = s"(x,y) :($x,$y)"
 }
 
 
-//four
 abstract class Shape {
   def centerPoint :point
   def className = this.getClass.getSimpleName
@@ -70,11 +69,30 @@ class Rectangle(val topLeft:point,val bottomRight:point) extends Shape {
 }
 
 class Circle(val centerPoint: point, val radius: Int) extends Shape
-
+//
 object WeekTwo extends App {
-  val rect = new Rectangle(new point(0,0), new point(10, 10))
-  println(rect)
+//  val rect = new Rectangle(new point(0,0), new point(10, 10))
+//  println(rect)
+
+//  val x1 = new OrderdedPoint(2, -1)
+//  val x2 = new OrderdedPoint(2, 1)
+//  println(x1 < x2)
+//  println(x1 > x2)
 }
 
 
+//five--------------------------------------------------------
+//class OrderdedPoint(x:Int,y:Int) extends java.awt.Point with math.Ordered[java.awt.Point]{
+//
+//
+//  def compare(that: java.awt.Point): Int = {
+//    if (x <= that.x) {
+//      if(this.x == that.y) {
+//        if(this.y < that.y) -1
+//        else if (this.y > that.y) 1
+//        else 0
+//      } else -1
+//    } else 1
+//  }
+//}
 
