@@ -12,16 +12,29 @@ class CaseClassDemo {
 
 object CaseClassDemo extends App {
 
-  def m(p :Person2) {
-    p match {
-      case Teacher(_) => println("This is Teacher")
-      case Student2(_) => println("This is Student")
-      case Teacher("AB") => println("this is Teacher AB ")
-      case _ => println("Other Type")
-    }
+//  def m(p :Person2) {
+//    p match {
+//      case Teacher(_) => println("This is Teacher")
+//      case Student2(_) => println("This is Student")
+//      case Teacher("AB") => println("this is Teacher AB ")
+//      case _ => println("Other Type")
+//    }
+//  }
+//
+//  m(Teacher("A"))
+
+//Option Some(value)
+  val m = Map(1->2)
+
+  m.get(1) match {
+    case Some(v) => println(v)
+    case None => println("No such key")
   }
 
-  m(Teacher("A"))
+  val a = "Yes"
+
+  println(s"$a, I DO")
+
 }
 
 abstract class Person2
