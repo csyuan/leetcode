@@ -65,7 +65,7 @@ public class Logistic {
 
 
     public static List<Instance> importDataSets(String url) throws IOException {
-        List<Instance> dataSets = new ArrayList<>();
+        List<Instance> dataSets = new ArrayList<Instance>();
 
         BufferedReader br = new BufferedReader(new FileReader(url));
         String line = br.readLine();
