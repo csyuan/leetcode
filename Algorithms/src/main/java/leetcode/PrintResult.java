@@ -10,7 +10,7 @@ import java.io.InputStreamReader;
 public class PrintResult {
     public static void main(String[] args) {
         Result result = new Result();
-        System.out.println("input a num :");
+        System.out.println("Input a Number :");
         int a = InputData.getInt();
         result.print(a);
     }
@@ -36,7 +36,7 @@ class InputData {
 
 class Result {
     void print(int d) {
-        System.out.println(d + "pingf" + d * d );
-        System.out.println(d + "lif" + d * d * d);
+        System.out.println(d + "的平方： " + d * d );
+        System.out.println(d + "的立方： " + d * d * d);
     }
 }
