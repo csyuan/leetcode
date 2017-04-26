@@ -41,5 +41,8 @@ public class Inner {
         System.out.println(inner2.equals(inner21));
         System.out.println(inner3.equals(inner4));
 
+
     }
+
+
 }
