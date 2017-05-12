@@ -6,16 +6,21 @@ package leetcode;
 public class Test {
     public static void main(String[] args) {
 
-        int n = 2;
-        int res = 1;
-        int count = 99;
-        while(n < count) {
-            res += getOnly(n);
-            ++n;
-//            System.out.println(res);
-        }
-//        System.out.println(n);
-        System.out.println(res);
+//        int n = 2;
+//        int res = 1;
+//        int count = 99;
+//        while(n < count) {
+//            res += getOnly(n);
+//            ++n;
+////            System.out.println(res);
+//        }
+////        System.out.println(n);
+//        System.out.println(res);
+
+        Father father = new Father();
+        Father child = new Child();
+        System.out.println(father.getName());
+        System.out.println(child.getName());
     }
 
     private static int getOnly(int num) {
@@ -32,5 +37,18 @@ public class Test {
         }
         return number;
 
+    }
+}
+
+
+class Father {
+    public static String getName() {
+        return "Father ";
+    }
+}
+
+class Child extends Father {
+    public static String getName() {
+        return "Child";
     }
 }
