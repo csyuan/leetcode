@@ -5,50 +5,29 @@ package leetcode;
  */
 public class Test {
     public static void main(String[] args) {
-
-//        int n = 2;
-//        int res = 1;
-//        int count = 99;
-//        while(n < count) {
-//            res += getOnly(n);
-//            ++n;
-////            System.out.println(res);
-//        }
-////        System.out.println(n);
-//        System.out.println(res);
-
-        Father father = new Father();
-        Father child = new Child();
-        System.out.println(father.getName());
-        System.out.println(child.getName());
+        City city = new City();
+        city.value();
     }
 
-    private static int getOnly(int num) {
-        int number = 0;
-        String s = num + "";
-        int len = s.length();
-        if(len != 0){
-            for(int i = 0; i < len; i++) {
-                char a = s.charAt(i);
-                if(a == '1') {
-                    number ++;
-                }
-            }
-        }
-        return number;
 
+}
+
+class Country {
+    String name;
+    void value() {
+        name="China";
     }
 }
 
+class City extends Country {
+    String name;
 
-class Father {
-    public static String getName() {
-        return "Father ";
+    @Override
+    void value() {
+        name = "Chengdu";
+        super.value(); //变量初始化
+        System.out.println(name);
+        System.out.println(super.name);
     }
 }
 
-class Child extends Father {
-    public static String getName() {
-        return "Child";
-    }
-}
