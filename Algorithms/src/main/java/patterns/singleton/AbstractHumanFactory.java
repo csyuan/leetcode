@@ -1,4 +1,4 @@
-package patterns.Singleton;
+package patterns.singleton;
 
 /**
  * Created by hadoop on 17-5-15.
