@@ -33,7 +33,7 @@ object ApplyTest {
 
 object Basic5 extends App {
 //  ApplyTest.static
-//  val a = ApplyTest() //类名后面加括号(),表示调用了对象apply()方法,99%都这样用
+//  val a = ApplyTest() //类名后面加括号(),表示调用了对象apply()方法, 99%都这样用
 //  a.test
 
 //  val t = new ApplyTest
