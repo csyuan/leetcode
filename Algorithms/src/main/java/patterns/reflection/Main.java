@@ -80,7 +80,7 @@ public class Main {
         Class<?> class2 = null;
 
         //写法1, 可能抛出 ClassNotFoundException [多用这个写法]
-        class1 = Class.forName("cn.yuan.demo.Person");
+        class1 = Class.forName("patterns.reflection.Person");
         System.out.println("Demo2:(写法1) 包名: " + class1.getPackage().getName() + "，"
                 + "完整类名: " + class1.getName());
 
@@ -98,7 +98,7 @@ public class Main {
      */
     public static void Demo3() throws ClassNotFoundException, InstantiationException, IllegalAccessException {
         Class<?> class1 = null;
-        class1 = Class.forName("cn.yuan.demo.Person");
+        class1 = Class.forName("patterns.reflection.Person");
         //由于这里不能带参数，所以你要实例化的这个类Person，一定要有无参构造函数哈～
         Person person = (Person) class1.newInstance();
         person.setAge(20);
@@ -119,7 +119,7 @@ public class Main {
         Person person1 = null;
         Person person2 = null;
 
-        class1 = Class.forName("cn.yuan.demo.Person");
+        class1 = Class.forName("patterns.reflection.Person");
         //得到一系列构造函数集合
         Constructor<?>[] constructors = class1.getConstructors();
 
@@ -147,7 +147,7 @@ public class Main {
      */
     public static void Demo5() throws IllegalArgumentException, IllegalAccessException, SecurityException, NoSuchFieldException, InstantiationException, ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("cn.yuan.demo.Person");
+        class1 = Class.forName("patterns.reflection.Person");
         Object obj = class1.newInstance();
 
         Field personNameField = class1.getDeclaredField("name");
@@ -166,7 +166,7 @@ public class Main {
      */
     public static void Demo6() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("cn.yuan.demo.SuperMan");
+        class1 = Class.forName("patterns.reflection.SuperMan");
 
         //取得父类名称
         Class<?>  superClass = class1.getSuperclass();
@@ -214,7 +214,7 @@ public class Main {
      */
     public static void Demo7() throws ClassNotFoundException, SecurityException, NoSuchMethodException, IllegalArgumentException, IllegalAccessException, InvocationTargetException, InstantiationException {
         Class<?> class1 = null;
-        class1 = Class.forName("cn.yuan.demo.SuperMan");
+        class1 = Class.forName("patterns.reflection.SuperMan");
 
         System.out.println("Demo7: \n调用无参方法fly()：");
         Method method = class1.getMethod("fly");
@@ -240,7 +240,7 @@ public class Main {
      */
     public static void Demo8() throws ClassNotFoundException {
         Class<?> class1 = null;
-        class1 = Class.forName("cn.yuan.demo.SuperMan");
+        class1 = Class.forName("patterns.reflection.SuperMan");
         String nameString = class1.getClassLoader().getClass().getName();
 
         System.out.println("Demo8: 类加载器类名: " + nameString);
